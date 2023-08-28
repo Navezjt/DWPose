@@ -19,12 +19,10 @@ pip install -r requirements.txt
 conda env create -f environment.yaml
 conda activate control-v11
 ```
-🌵 Second, install tools to apply DWPose to ControlNet. If it's hard to install mmcv, you can refer branch [onnx](https://github.com/IDEA-Research/DWPose/tree/onnx), which just needs onnxruntime.
+🌵 Second, install tools to apply DWPose to ControlNet. If it's hard to install onnxruntime, you can refer branch [opencv_onnx](https://github.com/IDEA-Research/DWPose/tree/opencv_onnx), which runs the onnx model with opencv.
 ```
 # Set ControlNet environment
-pip install -U openmim
-mim install mmengine
-mim install "mmcv>=2.0.1"
-mim install "mmdet>=3.1.0"
-mim install "mmpose>=1.1.0"
+pip install onnxruntime
+# if gpu is available
+pip install onnxruntime-gpu
 ```
